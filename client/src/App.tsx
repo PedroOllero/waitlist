@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { LearnMore } from "./screens/learn-more"
 import { Hero } from "./screens/hero";
-import classes from "./App.module.css"
 import ExtraInformation from "./screens/extra-information/extra-information";
 import Nav from "./screens/nav/nav";
 

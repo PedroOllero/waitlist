@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
         src="src/assets/img/FeatsLogoIMG.png"
       />
       <div>
-        <h1 className="bg-amber-400">
+        <h1 className="bg-primary-200">
           Conecta con <span>Artistas</span>
         </h1>
         <h2>

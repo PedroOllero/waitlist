@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import classes from "./FloatingLabelTextInput.module.css";
 import { ChevronFirst } from "lucide-react";
 
 interface FloatingLabelTextInputProps {

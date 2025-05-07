@@ -1,7 +1,6 @@
-import classes from "./nav.module.css";
 const Nav: React.FC = () => {
   return (
-    <div>
+    <div className="bg-black">
       <div>
         <img
           src="/src/assets/img/FeatsLogoIMG.png"
