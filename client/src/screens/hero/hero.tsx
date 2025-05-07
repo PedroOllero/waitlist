@@ -7,22 +7,21 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
   return (
-    <section className={classes.container}>
+    <section>
       <img
-        className={classes.logoImage}
         src="src/assets/img/FeatsLogoIMG.png"
       />
-      <div className={classes.textContainer}>
-        <h1 className={classes.title}>
-          Conecta con <span className={classes.highlight}>Artistas</span>
+      <div>
+        <h1 className="bg-amber-400">
+          Conecta con <span>Artistas</span>
         </h1>
-        <h2 className={classes.subtitle}>
+        <h2>
           Tu próxima canción empieza aquí
         </h2>
       </div>
-      <button className={classes.button} onClick={onScrollClick}>
+      <button onClick={onScrollClick}>
         Ver más
-        <ChevronDown className={classes.downIcon} />
+        <ChevronDown/>
       </button>
     </section>
   );

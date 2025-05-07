@@ -14,8 +14,8 @@ const FloatingLabelTextInput: React.FC<FloatingLabelTextInputProps> = ({ label, 
   const shouldFloat = isFocused || value.length > 0;
 
   return (
-    <div className={classes.inputContainer}>
-      <label className={`${classes.label} ${shouldFloat ? classes.float : ""}`}>
+    <div>
+      <label>
         {label}
       </label>
       <input
@@ -24,7 +24,6 @@ const FloatingLabelTextInput: React.FC<FloatingLabelTextInputProps> = ({ label, 
         onChange={(e) => onChange(e.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className={classes.input}
       />
     </div>
   );

@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
   };
 
   return (
-    <div className={classes.mainContainer}>
+    <div>
       <Nav />
       <Hero onScrollClick={handleScroll1} />
       <LearnMore ref={infoRef} onScrollClick={handleScroll2}/>

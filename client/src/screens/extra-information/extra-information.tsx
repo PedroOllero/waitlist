@@ -7,8 +7,8 @@ interface HeroProps {
 
 const ExtraInformation: React.FC<HeroProps> = ({ ref }) => {
   return (
-    <section ref={ref} className={classes.container}>
-      <div className={classes.containerInfo}>
+    <section ref={ref}>
+      <div>
         <h5>
           <Unplug />
           En Feats, dejamos atrás las conexiones por conveniencia
@@ -27,7 +27,7 @@ const ExtraInformation: React.FC<HeroProps> = ({ ref }) => {
           vuestro próximo proyecto juntos.
         </p>
       </div>
-      <div className={classes.containerInfo}>
+      <div>
         <h5>
           <BicepsFlexed />
           Una vez conectas, es momento de crear
@@ -43,7 +43,7 @@ const ExtraInformation: React.FC<HeroProps> = ({ ref }) => {
           proyectos, más calidad, más música.
         </p>
       </div>
-      <div className={classes.containerInfo}>
+      <div>
         <h5>
           <DollarSign />
           Feats es completamente gratuito
