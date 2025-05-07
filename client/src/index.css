@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope-VariableFont_wght.woff');
+    font-style: normal;
+    font-weight: 100 700;
+    font-display: swap;
+}
+
 @theme{
  /* Colors */
  --color-primary-100: #FF14A1;
@@ -12,12 +20,11 @@
  --color-alternative-100: #00D5F4;
  --color-alternative-200: #006C7D;
 
- --color-background-000: #000000;
  --color-background-100: #141414;
  --color-background-200: #242424;
  --color-background-300: #3e3e3e;
  --color-background-400: #7a7a7a;
  --color-background-500: #DEDEDE;
 
- --color-white: #FFFFFF;
+ --font-manrope: "Manrope", sans-serif;
 }

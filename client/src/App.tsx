@@ -18,7 +18,7 @@ const LandingPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="font-manrope">
       <Nav />
       <Hero onScrollClick={handleScroll1} />
       <LearnMore ref={infoRef} onScrollClick={handleScroll2}/>

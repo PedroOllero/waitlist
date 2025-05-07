@@ -1,14 +1,15 @@
 const Nav: React.FC = () => {
   return (
-    <div className="bg-black">
-      <div>
+    <nav className="flex flex-row justify-between text-2xl px-5 py-3 bg-black text-white">
+      <div className="">
         <img
           src="/src/assets/img/FeatsLogoIMG.png"
           alt="Logo"
+          className="w-11"
         />
-        <p>FEATS</p>
+        <p className="text-sm">FEATS</p>
       </div>
-      <div>
+      <div className="flex justify-around w-100 font-extralight">
         <a href="#home">
           Home
         </a>
@@ -22,7 +23,7 @@ const Nav: React.FC = () => {
           Contact
         </a>
       </div>
-    </div>
+    </nav>
   );
 };
 
