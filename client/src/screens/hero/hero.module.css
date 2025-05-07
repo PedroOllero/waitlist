@@ -1,0 +1,122 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  background: transparent;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logoImage {
+  width: 25vw;
+  height: auto;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 10px;
+  margin: 30px;
+}
+
+.title {
+  font-size: 7vw;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: text-shadow 0.3s ease;
+  overflow: hidden;
+  padding: 10px;
+  text-shadow: 0 0 20px var(--background-000);
+}
+
+.highlight {
+  --c: var(--primary-200); /* the color  */
+  --h: 1.2em; /* the height */
+  line-height: var(--h);
+  color: #0000;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 15px;
+  text-shadow: 0 calc(-1 * var(--h) * var(--_i, 0)) var(--c),
+    0 calc(var(--h) * (1 - var(--_i, 0))) #fff;
+  background: linear-gradient(var(--c) 0 0) no-repeat
+    calc(200% - var(--_i, 0) * 100%) 100% / 200%
+    calc(100% * var(--_i, 0) + 0.08em);
+  transition: 0.3s calc(var(--_i, 0) * 0.3s),
+    background-position 0.3s calc(0.3s - calc(var(--_i, 0) * 0.3s));
+}
+.highlight:hover {
+  border-radius: 15px;
+  --_i: 1;
+}
+
+.subtitle {
+  font-size: 3vw;
+  font-weight: 100;
+  text-shadow: 0 0 20px var(--background-000);
+}
+
+.button {
+  all: unset;
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-200);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.6vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(-80px);
+}
+
+.downIcon {
+  color: white;
+  font-size: 40px;
+  transition: all 500ms ease-in-out;
+}
+
+.button:hover .downIcon {
+  transform: translateY(5px);
+}
+
+.button:hover {
+  background-color: var(--primary-300);
+}
+
+
+@media (max-width: 768px){
+  .title {
+    font-size: 8vw;
+    padding: 7px;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .button {
+    width: 30vw;
+    font-size: 5vw;
+  }
+  .logoImage {
+    width: 50vw;
+    padding-top: 70px;
+  }
+}
