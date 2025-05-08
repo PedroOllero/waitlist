@@ -1,23 +1,17 @@
 const Nav: React.FC = () => {
   return (
-    <nav className="flex flex-row justify-between text-2xl px-5 py-3 bg-black text-white">
+    <nav className="flex flex-row justify-between items-center text-2xl px-5 py-3 bg-black text-white">
       <div className="">
         <img
           src="/src/assets/img/FeatsLogoIMG.png"
           alt="Logo"
-          className="w-11"
+          className="w-12"
         />
-        <p className="text-sm">FEATS</p>
+        <p className="text-sm tracking-widest">FEATS</p>
       </div>
-      <div className="flex justify-around w-100 font-extralight">
-        <a href="#home">
-          Home
-        </a>
+      <div className="flex justify-around w-40 text-base tracking-widest font-extralight">
         <a href="#about">
           About
-        </a>
-        <a href="#services">
-          Services
         </a>
         <a href="#contact">
           Contact

@@ -28,3 +28,5 @@
 
  --font-manrope: "Manrope", sans-serif;
 }
+
+@plugin "@midudev/tailwind-animations";
