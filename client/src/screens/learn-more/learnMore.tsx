@@ -47,79 +47,78 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
     return (
       <section
         ref={ref}
-        className="h-svh flex flex-col justify-between py-5 items-center gap-10 bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
+        className="h-svh flex flex-col justify-between py-5 items-center bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
       >
-        <div>
-          <PrimaryContainer className="p-5 w-90">
-            <h3 className="text-2xl text-center">¡Desliza y encuentra!</h3>
+        <PrimaryContainer className="p-5 w-[90%]">
+          <h3 className="text-2xl text-center">¡Desliza y encuentra!</h3>
+          <div>
             <div>
-              <div>
-                <ul>
-                  <li className="flex flex-row my-4">
-                    <Glasses className="w-10 mr-1" />
-                    Conoce a artistas que te ayuden a llevar tu tema al
-                    siguiente nivel.
-                  </li>
-                  <li className="flex flex-row my-4">
-                    <Music className="w-10 mr-1" />
-                    Descubre gente dentro de tu género musical o atrévete con
-                    algo nuevo.
-                  </li>
-                  <li className="flex flex-row my-4">
-                    <Globe className="w-8 mr-1" />
-                    No importa de dónde sean: conecta con todo el mundo
-                  </li>
-                  <li className="flex flex-row my-4">
-                    <BadgeCheck className="w-10 mr-1" />
-                    No importan tus números, trabajaras con la gente que sabe
-                    apreciar tu música
-                  </li>
-                </ul>
-              </div>
-              <div>
-                {/* <img
+              <ul>
+                <li className="flex flex-row my-4">
+                  <Glasses className="w-10 mr-1" />
+                  Conoce a artistas que te ayuden a llevar tu tema al siguiente
+                  nivel.
+                </li>
+                <li className="flex flex-row my-4">
+                  <Music className="w-10 mr-1" />
+                  Descubre gente dentro de tu género musical o atrévete con algo
+                  nuevo.
+                </li>
+                <li className="flex flex-row my-4">
+                  <Globe className="w-8 mr-1" />
+                  No importa de dónde sean: conecta con todo el mundo
+                </li>
+                <li className="flex flex-row my-4">
+                  <BadgeCheck className="w-10 mr-1" />
+                  No importan tus números, trabajaras con la gente que sabe
+                  apreciar tu música
+                </li>
+              </ul>
+            </div>
+            <div>
+              {/* <img
                   src="src/assets/img/example.jpg"
                 /> */}
-              </div>
             </div>
-            {/* <button type="submit" onClick={onScrollClick}>
+          </div>
+          {/* <button type="submit" onClick={onScrollClick}>
               !Quiero saber más!
               <ChevronDown />
             </button> */}
-          </PrimaryContainer>
-        </div>
+        </PrimaryContainer>
 
-        <div>
-          <PrimaryContainer className="p-5 w-90 bg-background-100">
-            <form className="flex flex-col justify-center items-center">
-              <h4 className="text-2xl text-center ">Apuntate a la waitlist</h4>
+        <PrimaryContainer className="p-5 w-[90%] bg-background-100">
+          <form className="flex flex-col justify-center items-center">
+            <h4 className="text-2xl text-center ">Apuntate a la waitlist</h4>
 
-              <FloatingLabelTextInput
-                label="Escribe tu nombre"
-                value={name}
-                onChange={setName}
-              />
+            <FloatingLabelTextInput
+              label="Escribe tu nombre"
+              value={name}
+              onChange={setName}
+            />
 
-              <FloatingLabelTextInput
-                label="Escribe tu correo"
-                value={email}
-                onChange={setEmail}
-              />
+            <FloatingLabelTextInput
+              label="Escribe tu correo"
+              value={email}
+              onChange={setEmail}
+            />
+            <div className="flex justify-around w-75 my-4">
+              <Selector value="Productor">Productor/a</Selector>
+              <Selector value="Cantante">Cantante</Selector>
+              <Selector value="Otro">Otro</Selector>
+            </div>
 
-              <div className="flex justify-around w-75 my-4">
-                <Selector value="Productor">Productor/a</Selector>
-                <Selector value="Cantante">Cantante</Selector>
-                <Selector value="Otro">Otro</Selector>
-              </div>
-
-              <button className="flex w-40 h-10 px-6 py-6 rounded-4xl justify-around items-center
-              text-2xl bg-primary-200 group hover:bg-primary-300 transition-all duration-500 ease-in-out" type="submit" onClick={handleSubmit}>
-                Enviar
-                <ChevronRight className="group-hover:translate-x-1 transition-all duration-500 ease-in-out" />
-              </button>
-            </form>
-          </PrimaryContainer>
-        </div>
+            <button
+              className="flex w-35 h-10 px-3 py-3 rounded-4xl justify-around items-center
+              text-xl bg-primary-200 group hover:bg-primary-300 transition-all duration-500 ease-in-out"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Enviar
+              <ChevronRight className="group-hover:translate-x-1 transition-all duration-500 ease-in-out" />
+            </button>
+          </form>
+        </PrimaryContainer>
       </section>
     );
   }

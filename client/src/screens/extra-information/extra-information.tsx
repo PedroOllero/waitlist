@@ -1,5 +1,4 @@
 import { BicepsFlexed, DollarSign, Unplug } from "lucide-react";
-import classes from "./extra-information.module.css";
 
 interface HeroProps {
   ref: React.Ref<HTMLDivElement>;
@@ -7,7 +6,7 @@ interface HeroProps {
 
 const ExtraInformation: React.FC<HeroProps> = ({ ref }) => {
   return (
-    <section ref={ref} className="h-svh flex flex-col justify-center items-center gap-10 bg-gradient-to-tl from-background-100 via-primary-200 to-background-200 text-white">
+    <section ref={ref} className="h-svh flex flex-col justify-center items-center gap-10 bg-gradient-to-tl from-background-100 via-background-300 to-background-200 text-white">
       <div>
         <h5>
           <Unplug />
