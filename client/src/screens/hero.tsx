@@ -1,11 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import { PrimaryContainer } from "../../components/FloatingLabelTextInput/PrimaryContainer";
-import bgVideo from "../../assets/video/bgFeats.mp4";
-import { PrimaryButtonContainer } from "../../components/FloatingLabelTextInput/PrimaryButtonContainer";
-interface HeroProps {
-  onScrollClick: () => void;
-}
+import { PrimaryContainer } from "../components/FloatingLabelTextInput/PrimaryContainer";
+import bgVideo from "../assets/video/bgFeats.mp4";
+import { PrimaryButtonContainer } from "../components/FloatingLabelTextInput/PrimaryButtonContainer";
 
 const RotatingWord: React.FC = () => {
   const words = ["cantantes", "productores", "compositores", "letristas"];
@@ -35,7 +32,14 @@ const RotatingWord: React.FC = () => {
   );
 };
 
-const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
+const Hero: React.FC = () => {
+  const handleScrollClick = () => {
+    const targetElement = document.getElementById("learnMore"); // Asegúrate de que el ID coincida con el elemento objetivo
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="h-svh flex flex-col justify-center items-center gap-10 bg-black text-white">
       <video
@@ -55,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
       </PrimaryContainer>
       <PrimaryButtonContainer>
         <button
-          onClick={onScrollClick}
+          onClick={handleScrollClick} // Usar la nueva función
           className="w-40 h-10 px-5 py-5 flex justify-around items-center group"
         >
           Ver más

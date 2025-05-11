@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { LearnMore } from "./screens/learn-more"
-import { Hero } from "./screens/hero";
-import ExtraInformation from "./screens/extra-information/extra-information";
-import Nav from "./screens/nav/nav";
+import ExtraInformation from "./screens/extra-information";
+import Nav from "./screens/nav";
+import LearnMore from "./screens/learnMore";
+import Hero from "./screens/hero";
 
 const LandingPage: React.FC = () => {
   const infoRef = useRef<HTMLDivElement | null>(null);
@@ -20,8 +20,8 @@ const LandingPage: React.FC = () => {
   return (
     <div className="font-manrope">
       <Nav />
-      <Hero onScrollClick={handleScroll1} />
-      <LearnMore ref={infoRef} onScrollClick={handleScroll2}/>
+      <Hero />
+      <LearnMore/>
       <ExtraInformation ref={extrainfoRef}/>
     </div>
   );

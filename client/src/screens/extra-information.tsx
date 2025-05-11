@@ -1,5 +1,5 @@
 import { BicepsFlexed, DollarSign, Unplug } from "lucide-react";
-import { PrimaryContainer } from "../../components/FloatingLabelTextInput/PrimaryContainer";
+import { PrimaryContainer } from "../components/FloatingLabelTextInput/PrimaryContainer";
 
 interface HeroProps {
   ref: React.Ref<HTMLDivElement>;
