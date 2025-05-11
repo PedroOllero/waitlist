@@ -60,8 +60,8 @@ const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
           onClick={onScrollClick}
           className="w-40 h-10 px-5 py-5 flex justify-around items-center group"
         >
-          Ver más
-          <ChevronDown className="group-hover:translate-y-1 transition-all duration-300 hover:bg-primary-300" />
+         Ver más
+          <ChevronDown className="group-hover:translate-y-1 transition-all duration-500 ease-in-out" />
         </button>
       </PrimaryButtonContainer>
     </section>
