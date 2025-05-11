@@ -91,7 +91,7 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
 
         <div>
           <PrimaryContainer className="p-5 w-90 bg-background-100">
-            <form>
+            <form className="flex flex-col justify-center items-center">
               <h4 className="text-2xl text-center ">Apuntate a la waitlist</h4>
 
               <FloatingLabelTextInput
@@ -106,16 +106,16 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
                 onChange={setEmail}
               />
 
-              <div className="flex justify-around">
+              <div className="flex justify-around w-75 my-4">
                 <Selector value="Productor">Productor/a</Selector>
                 <Selector value="Cantante">Cantante</Selector>
                 <Selector value="Otro">Otro</Selector>
               </div>
 
-              <button className="flex w-30 h-10 px-2 m-4 rounded-4xl py-4 justify-center items-center
-              text-2xl bg-primary-200 " type="submit" onClick={handleSubmit}>
+              <button className="flex w-40 h-10 px-6 py-6 rounded-4xl justify-around items-center
+              text-2xl bg-primary-200 group hover:bg-primary-300 transition-all duration-500 ease-in-out" type="submit" onClick={handleSubmit}>
                 Enviar
-                <ChevronRight />
+                <ChevronRight className="group-hover:translate-x-1 transition-all duration-500 ease-in-out" />
               </button>
             </form>
           </PrimaryContainer>

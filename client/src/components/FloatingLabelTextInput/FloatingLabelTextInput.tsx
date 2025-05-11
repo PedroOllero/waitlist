@@ -17,7 +17,7 @@ const FloatingLabelTextInput: React.FC<FloatingLabelTextInputProps> = ({
   const shouldFloat = isFocused || value.length > 0;
 
   return (
-    <div className="w-70 relative group m-5">
+    <div className="w-70 relative group m-2">
       <input
         type="text"
         value={value}

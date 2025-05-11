@@ -7,7 +7,7 @@ interface HeroProps {
 
 const ExtraInformation: React.FC<HeroProps> = ({ ref }) => {
   return (
-    <section ref={ref}>
+    <section ref={ref} className="h-svh flex flex-col justify-center items-center gap-10 bg-gradient-to-tl from-background-100 via-primary-200 to-background-200 text-white">
       <div>
         <h5>
           <Unplug />

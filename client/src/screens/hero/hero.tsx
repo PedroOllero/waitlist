@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
         muted
       />
       <PrimaryContainer>
-        <div className="w-120 p-7 justify-center items-center text-center text-6xl z-10">
+        <div className="w-90 p-7 justify-center items-center text-center text-5xl z-10">
           <h1 className="h-17">Conecta con</h1>
           <RotatingWord />
           <h2 className="text-lg mt-10 text-background-400">
