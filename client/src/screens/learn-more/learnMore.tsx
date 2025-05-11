@@ -47,9 +47,9 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
     return (
       <section
         ref={ref}
-        className="h-svh flex flex-col justify-between py-5 items-center bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
+        className="h-200 flex flex-col py-5 items-center bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
       >
-        <PrimaryContainer className="p-5 w-[90%]">
+        <PrimaryContainer className="px-5 py-3 w-[90%]">
           <h3 className="text-2xl text-center">¡Desliza y encuentra!</h3>
           <div>
             <div>
@@ -87,7 +87,7 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
             </button> */}
         </PrimaryContainer>
 
-        <PrimaryContainer className="p-5 w-[90%] bg-background-100">
+        <PrimaryContainer className="p-5 w-[90%] bg-background-100 mt-5 z-10">
           <form className="flex flex-col justify-center items-center">
             <h4 className="text-2xl text-center ">Apuntate a la waitlist</h4>
 

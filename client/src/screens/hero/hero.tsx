@@ -37,7 +37,7 @@ const RotatingWord: React.FC = () => {
 
 const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
   return (
-    <section className="h-svh flex flex-col justify-center items-center gap-10 bg-gradient-to-tl from-background-100 via-primary-200 to-background-200 text-white">
+    <section className="h-svh flex flex-col justify-center items-center gap-10 bg-black text-white">
       <video
         className="absolute h-svh object-cover z-0"
         src={bgVideo}
@@ -46,21 +46,19 @@ const Hero: React.FC<HeroProps> = ({ onScrollClick }) => {
         loop
         muted
       />
-      <PrimaryContainer>
-        <div className="w-90 p-7 justify-center items-center text-center text-xl z-10">
-          <h1 className="h-17">Conecta con</h1>
-          <RotatingWord />
-          <h2 className="text-lg mt-10 text-background-400">
-            Tu próxima canción empieza aquí
-          </h2>
-        </div>
+      <PrimaryContainer className="w-[90%] p-7 justify-center items-center text-center text-4xl z-10">
+        <h1 className="h-17">Conecta con</h1>
+        <RotatingWord />
+        <h2 className="text-lg mt-10 text-background-400">
+          Tu próxima canción empieza aquí
+        </h2>
       </PrimaryContainer>
       <PrimaryButtonContainer>
         <button
           onClick={onScrollClick}
           className="w-40 h-10 px-5 py-5 flex justify-around items-center group"
         >
-         Ver más
+          Ver más
           <ChevronDown className="group-hover:translate-y-1 transition-all duration-500 ease-in-out" />
         </button>
       </PrimaryButtonContainer>
