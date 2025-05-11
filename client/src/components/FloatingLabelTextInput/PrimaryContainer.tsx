@@ -1,6 +1,6 @@
 interface PrimaryContainerProps {
     children: React.ReactNode;
-    className: string;
+    className?: string;
 }
 
 export const PrimaryContainer: React.FC<PrimaryContainerProps> = ({children, className}) => {

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 import { PrimaryContainer } from "../../components/FloatingLabelTextInput/PrimaryContainer";
+import { Selector } from "../../components/Selector";
 
 interface HeroProps {
   onScrollClick: () => void;
@@ -89,9 +90,9 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
         </div>
 
         <div>
-          <div>
+          <PrimaryContainer className="p-5 w-90 bg-background-100">
             <form>
-              <h4>Apuntate a la waitlist</h4>
+              <h4 className="text-2xl text-center ">Apuntate a la waitlist</h4>
 
               <FloatingLabelTextInput
                 label="Escribe tu nombre"
@@ -105,27 +106,19 @@ const LearnMore = React.forwardRef<HTMLDivElement, HeroProps>(
                 onChange={setEmail}
               />
 
-              <div>
-                <label>
-                  <input type="radio" name="role" value="producer" />
-                  Productor
-                </label>
-                <label>
-                  <input type="radio" name="role" value="singer" />
-                  Cantante
-                </label>
-                <label>
-                  <input type="radio" name="role" value="both" />
-                  Otro
-                </label>
+              <div className="flex justify-around">
+                <Selector value="Productor">Productor/a</Selector>
+                <Selector value="Cantante">Cantante</Selector>
+                <Selector value="Otro">Otro</Selector>
               </div>
 
-              <button type="submit" onClick={handleSubmit}>
+              <button className="flex w-30 h-10 px-2 m-4 rounded-4xl py-4 justify-center items-center
+              text-2xl bg-primary-200 " type="submit" onClick={handleSubmit}>
                 Enviar
                 <ChevronRight />
               </button>
             </form>
-          </div>
+          </PrimaryContainer>
         </div>
       </section>
     );
