@@ -50,7 +50,7 @@ export const Form: React.FC = ({}) => {
 
   return (
     <form className="flex flex-col justify-center items-center">
-      <h4 className="text-2xl text-center mb-3">Apuntate a la waitlist</h4>
+      <h4 className="text-2xl lg:text-4xl lg:mb-10 text-center mb-3">Apuntate a la waitlist</h4>
 
       <TextInput label="Escribe tu nombre" value={name} onChange={setName} />
 

@@ -15,10 +15,10 @@ const LearnMore = React.forwardRef<HTMLDivElement>(() => {
   return (
     <section
       id="learnMore"
-      className="h-200 flex flex-col py-5 items-center bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
+      className="h-200 lg:h-svh flex flex-col lg:flex-row py-5 lg:justify-around items-center bg-gradient-to-tl from-primary-300 via-primary-200 to-primary-300 text-white"
     >
-      <PrimaryContainer className="px-5 py-3 w-[90%]">
-        <h3 className="text-2xl text-center">¡Desliza y encuentra!</h3>
+      <PrimaryContainer className="px-5 py-3 w-[90%] lg:w-[50%] lg:h-[70%]">
+        <h3 className="text-2xl lg:text-6xl text-center lg:mb-15">¡Desliza y encuentra!</h3>
         <div>
           <div>
             <ul>
@@ -38,8 +38,8 @@ const LearnMore = React.forwardRef<HTMLDivElement>(() => {
                 </p>
               </li>
               <li className="flex flex-row my-4">
-                <Globe className="w-8 mr-3" />
-                <p>
+                <Globe className="w-8 mr-3 lg:ml-1" />
+                <p className="lg:ml-1">
                   No importa de dónde sean: conecta con{" "}
                   <PinkHighlight> todo el mundo</PinkHighlight>
                 </p>
@@ -64,7 +64,7 @@ const LearnMore = React.forwardRef<HTMLDivElement>(() => {
               <ChevronDown />
             </button> */}
       </PrimaryContainer>
-      <PrimaryContainer className="p-5 w-[90%] bg-background-100 mt-5 z-10">
+      <PrimaryContainer className="p-5 w-[90%] lg:w-[30%] bg-background-100 mt-5 z-10">
         <Form />
       </PrimaryContainer>
     </section>
