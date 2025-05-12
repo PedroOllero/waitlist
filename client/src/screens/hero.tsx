@@ -1,8 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import { PrimaryContainer } from "../components/FloatingLabelTextInput/PrimaryContainer";
+import { PrimaryContainer } from "../components/PrimaryContainer";
 import bgVideo from "../assets/video/bgFeats.mp4";
-import { PrimaryButtonContainer } from "../components/FloatingLabelTextInput/PrimaryButtonContainer";
+import { PrimaryButtonContainer } from "../components/PrimaryButtonContainer";
 
 const RotatingWord: React.FC = () => {
   const words = ["cantantes", "productores", "compositores", "letristas"];
