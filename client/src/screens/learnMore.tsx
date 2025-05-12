@@ -1,14 +1,10 @@
 import React from "react";
-import { FloatingLabelTextInput } from "../components/FloatingLabelTextInput";
-import { useState } from "react";
-import { BadgeCheck, ChevronRight, Glasses, Globe, Music } from "lucide-react";
-import axios from "axios";
+import { BadgeCheck, Glasses, Globe, Music } from "lucide-react";
 import { PrimaryContainer } from "../components/PrimaryContainer";
-import { Selector } from "../components/Selector";
 import { Form } from "../components/Form";
+import { PinkHighlight } from "../components/PinkHighlight";
 
 const LearnMore = React.forwardRef<HTMLDivElement>(() => {
-
   const handleScrollClick = () => {
     const targetElement = document.getElementById("learnMore"); // Asegúrate de que el ID coincida con el elemento objetivo
     if (targetElement) {
@@ -28,22 +24,32 @@ const LearnMore = React.forwardRef<HTMLDivElement>(() => {
             <ul>
               <li className="flex flex-row my-4">
                 <Glasses className="w-10 mr-3" />
-                Conoce a artistas que te ayuden a llevar tu tema al siguiente
-                nivel.
+                <p>
+                  <PinkHighlight>Conoce a artistas</PinkHighlight> que te ayuden
+                  a llevar tu tema al siguiente nivel.
+                </p>
               </li>
               <li className="flex flex-row my-4">
                 <Music className="w-10 mr-3" />
-                Descubre gente dentro de tu género musical o atrévete con algo
-                nuevo.
+                <p>
+                  Descubre gente dentro de{" "}
+                  <PinkHighlight> tu género musical </PinkHighlight> o atrévete
+                  con algo nuevo.
+                </p>
               </li>
               <li className="flex flex-row my-4">
                 <Globe className="w-8 mr-3" />
-                No importa de dónde sean: conecta con todo el mundo
+                <p>
+                  No importa de dónde sean: conecta con{" "}
+                  <PinkHighlight> todo el mundo</PinkHighlight>
+                </p>
               </li>
               <li className="flex flex-row my-4">
                 <BadgeCheck className="w-10 mr-3" />
-                No importan tus números, trabajaras con la gente que sabe
-                apreciar tu música
+                <p>
+                <PinkHighlight>No importan tus números</PinkHighlight> , trabajaras con la gente que sabe
+                  apreciar tu música
+                </p>
               </li>
             </ul>
           </div>
@@ -59,7 +65,7 @@ const LearnMore = React.forwardRef<HTMLDivElement>(() => {
             </button> */}
       </PrimaryContainer>
       <PrimaryContainer className="p-5 w-[90%] bg-background-100 mt-5 z-10">
-          <Form/>
+        <Form />
       </PrimaryContainer>
     </section>
   );
