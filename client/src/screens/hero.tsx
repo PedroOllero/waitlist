@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
   return (
     <section className="h-svh flex flex-col justify-center items-center gap-10 bg-black text-white">
       <video
-        className="absolute h-svh object-cover z-0"
+        className="absolute h-svh lg:w-full object-cover z-0"
         src={bgVideo}
         title="video-feats"
         autoPlay
@@ -52,8 +52,8 @@ const Hero: React.FC = () => {
         playsInline
         preload="auto"
       />
-      <PrimaryContainer className="w-[90%] p-7 justify-center items-center text-center text-4xl z-10">
-        <h1 className="h-17">Conecta con</h1>
+      <PrimaryContainer className="w-[90%] lg:w-[50%] p-7 justify-center items-center text-center text-4xl lg:text-8xl font-bold z-10">
+        <h1 className="h-17 lg:h-30">Conecta con</h1>
         <RotatingWord />
         <h2 className="text-lg mt-10 text-background-400">
           Tu próxima canción empieza aquí
