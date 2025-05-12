@@ -7,7 +7,14 @@ import axios from "axios";
 export const Form: React.FC = ({}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [selectedRoles, setSelectedRoles] = useState("");
   const [success, setSuccess] = useState(false);
+
+
+  const handleSelectRoles = (value: string) => {
+    setSelectedRoles(value);
+    console.log(selectedRoles)
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,9 +49,15 @@ export const Form: React.FC = ({}) => {
         onChange={setEmail}
       />
       <div className="flex justify-around w-75 my-4">
-        <Selector value="Productor">Productor/a</Selector>
-        <Selector value="Cantante">Cantante</Selector>
-        <Selector value="Otro">Otro</Selector>
+        <Selector value="Producer" onSelect={handleSelectRoles}>
+          Productor/a
+        </Selector>
+        <Selector value="Singer" onSelect={handleSelectRoles}>
+          Cantante
+        </Selector>
+        <Selector value="Other" onSelect={handleSelectRoles}>
+          Otro
+        </Selector>
       </div>
 
       <button
