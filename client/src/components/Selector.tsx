@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 interface SelectorProps {
   value: string;
   children?: string;
   onSelect: (value: string) => void;
+  reset: boolean;
 }
 
-export const Selector: React.FC<SelectorProps> = ({ value, children, onSelect }) => {
+export const Selector: React.FC<SelectorProps> = ({ value, children, onSelect, reset }) => {
   const [isSelected, setIsSelected] = useState(false);
+
+  useEffect(() => {
+    if (reset) {
+      setIsSelected(false);
+    }
+  }, [reset]);
 
   const handleSelected = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

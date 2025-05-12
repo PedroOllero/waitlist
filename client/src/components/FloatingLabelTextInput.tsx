@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { ChevronFirst } from "lucide-react";
+import React from "react";
 
 interface FloatingLabelTextInputProps {
   label: string;
@@ -7,14 +6,11 @@ interface FloatingLabelTextInputProps {
   onChange: (value: string) => void;
 }
 
-const FloatingLabelTextInput: React.FC<FloatingLabelTextInputProps> = ({
+const TextInput: React.FC<FloatingLabelTextInputProps> = ({
   label,
   value,
   onChange,
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const shouldFloat = isFocused || value.length > 0;
 
   return (
     <div className="w-70 relative group m-2">
@@ -29,4 +25,4 @@ const FloatingLabelTextInput: React.FC<FloatingLabelTextInputProps> = ({
   );
 };
 
-export default FloatingLabelTextInput;
+export default TextInput;

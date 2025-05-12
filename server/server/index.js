@@ -14,19 +14,20 @@ const db = new sqlite3.Database("waitlist.db");
 db.run(`CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
-  email TEXT
+  email TEXT,
+  roles TEXT
 )`);
 
 app.post("/api/waitlist", (req, res) => {
-  const { name, email } = req.body;
+  const { name, email, roles } = req.body;
 
-  if (!name || !email) {
+  if (!name || !email || !roles) {
     return res.status(400).json({ error: "Faltan campos" });
   }
 
   db.run(
-    `INSERT INTO users (name, email) VALUES (?, ?)`,
-    [name, email],
+    `INSERT INTO users (name, email, roles) VALUES (?, ?, ?)`,
+    [name, email, roles],
     function (err) {
       if (err) return res.status(500).json({ error: err.message });
       res.json({ success: true, id: this.lastID });
