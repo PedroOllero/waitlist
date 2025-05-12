@@ -49,6 +49,8 @@ const Hero: React.FC = () => {
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
       />
       <PrimaryContainer className="w-[90%] p-7 justify-center items-center text-center text-4xl z-10">
         <h1 className="h-17">Conecta con</h1>
@@ -59,11 +61,11 @@ const Hero: React.FC = () => {
       </PrimaryContainer>
       <PrimaryButtonContainer>
         <button
-          onClick={handleScrollClick} // Usar la nueva función
+          onClick={handleScrollClick}
           className="w-40 h-10 px-5 py-5 flex justify-around items-center group"
         >
           Ver más
-          <ChevronDown className="group-hover:translate-y-1 transition-all duration-500 ease-in-out" />
+          <ChevronDown className="group-hover:translate-y-1 group-active:translate-y-1 transition-all duration-500 ease-in-out" />
         </button>
       </PrimaryButtonContainer>
     </section>
