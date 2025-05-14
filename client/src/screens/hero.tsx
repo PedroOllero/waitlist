@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         playsInline
         preload="auto"
       />
-      <PrimaryContainer className="w-[90%] lg:w-[50%] p-7 justify-center items-center text-center text-4xl lg:text-8xl font-bold z-10">
+      <PrimaryContainer className="w-[90%] lg:w-[60%] p-7 justify-center items-center text-center text-4xl lg:text-8xl font-bold z-10">
         <h1 className="h-17 lg:h-30">Conecta con</h1>
         <RotatingWord />
         <h2 className="text-lg mt-10 text-background-400">

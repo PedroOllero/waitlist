@@ -5,9 +5,8 @@ const cors = require("cors");
 const app = express();
 const PORT = 3001;
 
-// 🟢 IMPORTANTE: estos middlewares antes de las rutas
 app.use(cors());
-app.use(express.json()); // << Asegúrate de que esto está
+app.use(express.json());
 
 const db = new sqlite3.Database("waitlist.db");
 
@@ -23,6 +22,14 @@ app.post("/api/waitlist", (req, res) => {
 
   if (!name || !email || !roles) {
     return res.status(400).json({ error: "Faltan campos" });
+  }
+
+  if (
+    typeof name !== "string" || name.length > 100 ||
+    typeof email !== "string" || email.length > 200 ||
+    !email.includes("@")
+  ) {
+    return res.status(400).json({ error: "Datos inválidos" });
   }
 
   db.run(
